@@ -40,7 +40,7 @@ api.interceptors.response.use(
           return api(originalRequest);
         } catch (refreshError) {
           localStorage.clear();
-          window.location.hash = '#/login';
+          window.location.hash = '/login';
           return Promise.reject(refreshError);
         }
       }
